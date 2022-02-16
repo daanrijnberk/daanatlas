@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="style.mississippi.css">
+<link href="https://fonts.googleapis.com/css2?family=Secular+One&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@200&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+crossorigin=""/>
+<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+crossorigin=""></script>
+<style>#mapid { height: 500px; }</style>
+<title>Dreiging Mississippi delta</title>
+</head>
+
+<body>
+<div class="nav">
+    <nav>
+    <ul>
+         <a href="index.html">
+            <img class="logo" src="C:/Users/daanr/OneDrive/Bureaublad/Jaar 3/Website/daanatlas/visualdelta.png" alt="logo van Visual Delta">
+            </a>
+        <li style="float:right"><a class="active" href="contact.html">Contact</a></li>
+        <li style="float: right;"><a href="vergelijking.html">Vergelijking</a></li>
+        <li style="float: right;"><a href="Nijl.html">Nijl</a></li>
+        <li style="float: right;"><a href="Mississippi.html">Mississippi</a></li>
+    </ul>
+    </nav>
+  </div>
+
+<div class="row">
+  <div class="leftcolumn">
+
+      <div class="titel"><h1>Mississippi Delta</h1>
+      </div>
+  </div>
+
+
+  <div class="rightcolumn">
+        
+        <div class="topbalk">
+            <p>De Mississippi is de langste rivier van de VS met een lengte van 6 km. Daarmee is het eveneens de 4de langste rivier ter wereld. De rivier bevind zich in het zuiden van de VS in de staat Louisiana. De grote stad die zich bevind in de delta is New Orleans. Deze stad huisvest zo'n 2 miljoen mensen. De regio wordt regelmatig geteisterd door orkanen, overstromingen en tropische stormen. Een bekende hiervan is orkaan Katrina die het gebied teisterde in 2005 en voor miljarden aan schade zorgde. <br><br> Klimaatverandering is alleen een grote dreiging voor de delta en zijn mensen. Door stijging van de zeespiegel is het gebied kwetsbaar. Door zijn lage ligging komt het voor steeds meer uitdagingen te staan en wordt er hard gezocht naar oplossingen. Het gebied blijft land verliezen aan de zee en in een rap tempo.</p>
+        </div>
+  </div>
+
+<div class="row">
+    <div class="columnleft">
+      <div id="mapid"></div>
+
+      <script>
+      
+      var mymap = L.map('mapid').setView([29.605,-89.881], 13);
+
+      L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
+          attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+          maxZoom: 10,
+          id: 'mapbox/streets-v11',
+          tileSize: 512,
+          zoomOffset: -1,
+          accessToken: 'pk.eyJ1IjoiZGFhbjA4MDIiLCJhIjoiY2tpNXYzMDV6MnVldjJxbXB1emw5aDNyZCJ9.-C7Qteu7PIRRIyBuiedBtQ'
+      }).addTo(mymap);
+
+      var myvar = 
+      {
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#2b00ff",
+        "marker-size": "medium",
+        "marker-symbol": "water"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.99313354492188,
+          29.834092029616816
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#ff0000",
+        "marker-size": "medium",
+        "marker-symbol": "city"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -90.098876953125,
+          29.987649890847624
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#7e7e7e",
+        "marker-size": "medium",
+        "marker-symbol": "star-stroked"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.45755004882812,
+          29.359436379841345
+        ]
+      }
+    }
+  ]
+};
+
+var x = L.geoJSON(myvar).addTo(mymap);
+
+
+     
+      </script>
+
+
+    </div>
+    <div class="columnright">
+      <h1>De geografie van de Mississippi delta</h1>
+<br><br>
+      <p class="paragraaf">
+        De Mississippi is de 4de langste rivier ter wereld met een lengte van ongeveer 6000 km. Hij mond uit in de golf van Mexico in het zuiden van de VS. De delta heeft een oppervlakte van 12.000 km2 waarvan 11.000 km2 wetlands zijn. Zoals op de kaart te zien is loopt de delta in de vorm van een vogelpoot. Het gebied ziet er opmerkelijk uit door zijn hoogte verschillen. De rivier loopt zeer kronkelig door het landschap heen. 
+        </p>
+<br>
+        <p class="paragraaf">
+          Het is een rivier die zeer veel sediment afvoert. Het is daarom ook een zogenaamde mudflat. Het is dus een delta die is ontstaan door veel sedimentatie van de rivier waardoor het land door middel van sediment verder is uitgebouwd de zee in. Dit is dan ook op de huidige kaart nog goed te zien. Alles zuidelijk van New Orleans is door sediment vanuit de rivier uitgebouwd. Door dichtslippen van al deze riviertjes ontstaan overal in de delta kleine eilandjes. 
+          </p>
+    </div>
+  </div>   
+  
+  <div class="row">
+    <div class="columncenter">
+      <iframe title="Gemiddelde Temperatuur" aria-label="Interactive line chart" id="datawrapper-chart-i4OUZ" src="https://datawrapper.dwcdn.net/i4OUZ/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="305"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(a){if(void 0!==a.data["datawrapper-height"])for(var e in a.data["datawrapper-height"]){var t=document.getElementById("datawrapper-chart-"+e)||document.querySelector("iframe[src*='"+e+"']");t&&(t.style.height=a.data["datawrapper-height"][e]+"px")}}))}();
+      </script>
+      <h1 class="margin">De delta historie</h1>
+<br>
+      <p class="paragraaf">De delta is zo ongeveer 4500 jaar geleden ontstaan.</p>
+      <br>
+      <p class="paragraaf">Ontdekt door Alvarez de Pineda uit Spanje, maar werd in 1682 alsnog geclaimd door de fransen. De eerste gebouwen werden er gebouwd in 1699. In die tijd was het er niet makkelijk leven. De ontstane stad was gevoelig voor orkanen en overstromingen.</p>
+      <br>
+      <p class="paragraaf">Toen in 1803 de US Louisiana kocht van Napoleon werd het belang van de Mississippi en new Orleans nog groter. Zo was het vanwege de vruchtbare grond een belangrijk deel van de landbouw industrie. Met name suikerriet en katoen werden en worden nog altijd veel verbouwd in de regio. </p>
+    </div>
+
+    <div class="columncenter">
+      <h1>Watergebruik</h1>
+<br>
+      <p class="paragraaf">Olie en gas is 1 van de voornaamste. . De Mississippi speelt hier ook een eer belangrijke rol in. Zo is deze erg belangrijk voor het transport, zowel het binnenland in als de haven van new Orleans uit. De golf van Mexico is goed voor 33% van de seafood van de US. En 75% van alle gevangen vis wordt het land binnen gebracht door de havens van de Mississippi delta. </p>
+<br>
+      <p class="paragraaf">Toerisme is de laatste grote financiële bron in de Mississippi delta. Zo heb je eco-toeristen die komen voor de wetlands of plezier visserij. Maar ook mensen die komen voor de stad. Daarnaast hebben de havens in de delta ook nog een druk cruise schema. Elk jaar gaan hier honderden cruises op pad.</p>
+    </div>
+  </div>
+
+<div class="row">
+  <div class="container">
+    <img src="afbeelding1.jpg" alt="schade in new orleans na orkaan katrina" class="image" style="width:100%">
+    <div class="middle">
+      <div class="paragraaf">
+        <h1>Orkaan Katrina</h1>
+        <br>
+        <p>Op 29 augustus stak Katrina het schiereiland van de Mississippidelta over. Uiteindelijk liet de orkaan New Orleans net links liggen en trok ze recht over Biloxi. Toch was de schade in New Orleans zeer groot. Door het hoge water heersten er chaos en reddeloosheid in een van de armste delen van de Verenigde Staten. Als gevolg van dijkdoorbraken liep 80% van New Orleans enkele meters onder water. </p>
+        <br><br>
+        <p class="quote"> "2 jaar later waren grote delen van de stad nog steeds verlaten en onbewoond. In veel straten herinnerden alleen de betonnen vloeren aan de woningen waar ooit mensen met plezier leefden. In de tuinen staat het onkruid meters hoog."</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="rightc">
+
+    <div class="cijfers">
+      <p>153</p>
+      <p class="uitleg">Miljard dollar aan schade</p>
+    </div>
+<br><br><br>
+    <div class="cijfers">
+      <p>400</p>
+      <p class="uitleg">km/u windsnelheden</p>
+    </div>
+  </div>
+
+  <div class="centerc">
+
+    <div class="cijfers">
+      <p>1833</p>
+      <p class="uitleg">Slachtoffers</p>
+    </div>
+<br><br><br>
+    <div class="cijfers">
+      <p>80%</p>
+      <p class="uitleg">van New Orleans onder water</p>
+    </div>
+  </div>
+
+  <div class="leftc">
+
+    <div class="cijfers">
+      <p>In cijfers</p>
+    </div>
+  </div>
+</div>
+
+
+
+
+<div class="row">
+  <div class="columncenter">
+    <h1>De dreigingen van de Mississippi delta</h1>
+<br>
+    <p class="paragraaf">Door de geschiedenis heen kent de Mississippi delta al periodes van uitbreiding en landverlies. Alleen over de laatste periode is de balans verdwenen en verliest de delta veel meer grond dan het nog terugwint door sedimentatie. Dit komt door meerdere factoren. </p>
+    <br>
+    <p class="paragraaf">Sommige dreigingen zijn natuurlijke factoren zoals orkanen of klimaatverandering. Maar ook een gebrek aan sedimentatie speelt hier een belangrijke rol in. Daarnaast speelt ook zeker de mens een prominente rol. Zo zijn door de mens aangelegde kanalen of dammen slecht nieuws voor de delta. Door dit gebrek aan sedimentatie wordt de grens tussen zoet en zout water ook steeds kleiner, wat een grote dreiging vormt voor de waardevolle wetlands.  </p>
+    <br><br><br>
+    <p class="paragraaf">Dan zijn er hier ook elk jaar nog een aantal stormen en orkanen. Hierbij zijn de barrier islands en wetlands de eerste barrière om de steden en mensen te beschermen, maar nu deze gebieden zo verzwakt zijn door een gebrek aan sedimentatie, erosie en verzilting, is deze barrière zo sterk niet meer. als voorbeeld: tijdens orkaan Katrina in 2005 werd 520 km2 wetlands open water, zee. Dit is een voorbeeld van een verzwakt gebied die moet opboksen tegen klimaatverandering en zo resulteert in permanent land verlies. </p>
+    <br>
+    <p class="paragraaf">En om dan maar verder te gaan op deze klimaatverandering, zee spiegel stijging. Een dreiging voor alle kusten. Maar deze zeespiegelstijging, een toename aan stormen en orkanen zorgen samen voor een groot verlies aan land. Deze combinatie aan factoren, land verlies, tekort aan sedimentatie, stijgende zeespiegel. Dit alles zorgt voor een grote kans of permanent land verlies op grote schaal waarbij huidig land, zee wordt. </p>
+  </div>
+</div>
+
+<div class="row">
+  <div class="container">
+    <img src="afbeelding2.jpg" alt="Wetlands van new orleans" class="image2" style="width:100%">
+    <div class="middle">
+      <div class="paragraaf">
+        <h2>Mississippi wetlands</h2>
+        <br>
+        <p></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="columncenter">
+
+    <p class="paragraaf">Dan hebben we eigenlijk alleen nog maar de natuurlijke dreigingen besproken, dan zijn er ook nog de dreigingen die direct door de mens gecreëerd worden of bijdragen aan de natuurlijke dreigingen. </p>
+    <br><br><br>
+    <h1>1</h1><p class="paragraaf">Dammen zijn een door de mens gemaakt iets om de rivierstroom te controleren of energie ermee op te wekken. En ze zijn zeer nuttig, zo voorkomen ze veel overstromingen van de rivier en wekken ze veelal groene energie op. Alleen nu blijken er toch ook veel ernstige nadelen aan te zitten. Deze dammen controleren de stroom van de rivier zo erg dat er steeds meer een scheiding ontstaat tussen de wetlands en de rivier. En het voornamelijkste effect van deze dammen is dat het de hoeveelheid sedimentatie erg remt en hierdoor het land niet meer kan uitbreiden, een van de kern taken van de rivier. </p>
+    <br><br>
+    <h1>2</h1><p class="paragraaf">Gas en olie kanalen zijn ook nog wel een probleem. Tijdens de jaren 60 en 80 was er veel activiteit in de olie en gas industrie in het gebied. Kanalen graven was voor deze bedrijven cruciaal om alles zo snel en soepel mogelijk te kunnen vervoeren en natuurlijk pijplijnen kwijt te kunnen. Zo lopen er nu 10 grote pijplijnen door de delta heen. Dit heeft alleen een behoorlijke impact op de wetlands. Deze zijn door de aanleg van al deze kanalen en boringen met ongeveer 59% afgenomen tijdens de periode 1956-1978. </p>
+  </div>
+</div>
+
+<div class="row">
+  <div class="columncenter2">
+    <img  src="giphy.gif" alt="wijzende vinger GIF" width="100px" height="50px">
+<button class="button button1">Kom in actie samen met Delta Alliance</button>
+  </div>
+</div>
+
+
+
+<footer>
+  <div class="positie">
+    
+    <div class="footerteskt">
+      <ul>
+        <span style="margin-right: 15px; margin-left: 500px;">
+        <a href="home.html">home</a>
+      </span>
+      <span style="margin-right: 15px;">
+        <a href="Mississippi.html">Mississippi</a>
+      </span>
+      <span style="margin-right: 15px;">
+        <a href="Nijl.html">Nijl</a>
+      </span>
+      <span style="margin-right: 15px;">
+        <a href="vergelijking.html">Vergelijking</a>
+      </span>
+      <span style="margin-right: 15px;">
+        <a href="contact.html">Contact</a>
+      </span>
+      </ul>
+    </div>
+
+    <hr>
+
+    <div class="credits">
+      © Daan Rijnberk
+      <br>
+      <span style="margin-left: -29px;"> Aeres Hogeschool Almere</span>
+      <br>
+       <span style="margin-left: 28px;">2021</span>
+    </div>
+
+  </div>
+</footer>
+
+</body>
+</html

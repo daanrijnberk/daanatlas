@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="style.vergelijking.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <section>
+        <nav>
+        <ul>
+            <a href="index.html">
+                <img class="logo" src="visualdelta.png" alt="logo visual delta">
+                </a>
+            <li style="float:right"><a class="active" href="contact.html">Contact</a></li>
+            <li style="float: right;"><a href="vergelijking.html">Vergelijking</a></li>
+            <li style="float: right;"><a href="Nijl.html">Nijl</a></li>
+            <li style="float: right;"><a href="Mississippi.html">Mississippi</a></li>
+        </ul>
+        </nav>
+    </section>
+
+    <div class="row">
+        <div class="leftcolumn">
+      
+            <div class="teksttitel"><h1>Mississippi vs Nijl</h1>
+            </div>
+        </div>
+    </div>
+
+    <div class="tab">
+        <button class="tablinks" onmouseover="openCity(event, 'klimaat')">Klimaat</button>
+        <button class="tablinks" onmouseover="openCity(event, 'rivier')">Rivier</button>
+        <button class="tablinks" onmouseover="openCity(event, 'stad')">Stad</button>
+        <button class="tablinks" onmouseover="openCity(event, 'land')">Land</button>
+      </div>
+      
+      <div id="klimaat" class="tabcontent">
+        <h1>Mississippi</h1>
+        <p>De delta ligt in een zeer vochtige regio met een gemiddelde jaarlijkse neerslag van 1500 mm per jaar. Deze neerslag komt in deze regio dan ook regelmatig in de vorm van tropische stormen</p>
+        <br>
+        <p>De gemiddelde temperatuur verschilt tussen de 3 graden in de winter en 32 graden in de zomer. De regio het zeer vaak last van orkanen, heftige regenval en hoge waterstand. </p>
+        <br><br>
+        <h1>Nijl</h1>
+        <p>Door de ligging naast de Sahara heb je hier een Hot dessert climate (koppen: BWh). Het noordoostelijke deel van Egypte is het meest regenachtige deel van de delta met relatief zachte temperaturen met een temperatuur die gewoonlijk niet hoger is dan 31 graden. De hoogste temperaturen worden gemeten gedurende de zomermaanden, Juli en augustus, met een gemiddelde van 34 graden. </p>
+        <br>
+        <p>In de winter liggen de temperaturen voornamelijk overdag rond de 19 graden en s’nachts ongeveer 9 graden. Met koudere temperaturen en wat regen is de nijldelta vrij vochtig tijdens de winter maanden. </p>
+      </div>
+      
+      <div id="rivier" class="tabcontent">
+        <h1>Mississippi</h1>
+        <p>De Mississippi is de 4de langste rivier ter wereld en de langste van Noord-Amerika. Dit met een lengte van 6211km. De rivier heeft 22 riviermonden die de Golf van Mexico instromen.</p>
+        <br><br>
+        <h1>Nijl</h1>
+        <p>De nijl is de langste rivier ter wereld. Hij ontspringt rond de evenaar en stroomt 7000 km naar het noorden.<br> De echte delta begint in zuid Egypte, dit is het punt waar de rivier vertakt en opsplitst tot deze uitmonden in de middellandse zee. Bij de vertakking in zuid Egypte splitst de nijl zich in verschillende secties en deze bestaat voornamelijk uit 2 hoofdtakken, de Damietta en de Rosetta, waar deze de middellandse zee instromen bij havensteden met dezelfde naam.</p>
+      </div>
+      
+      <div id="stad" class="tabcontent">
+        <h1>Mississippi</h1>
+        <p>New Orleans is de grootste stad in de Mississippi delta. De stad is thuis voor 378.715 inwoners. De stad is wereldwijd vooral bekent om zijn orkanen die hier regelmatig veel schade aanrichten. Orkaan Katrina trof het gebied in 2005 met zo'n 1800 slachtoffers.<br><br> De haven van New orleans is voornamelijk belangrijk voor de visserij van het land. Het overgrote deel van alle vis wordt gevangen in de golf van Mexico en doorgevoerd in de haven van New Orleans.</p>
+        <br><br>
+        <h1>Nijl</h1>
+        <p>Alexandrie is de grootste stad in de Nijl delta en is noordwestelijk gelegen in de delta. Hier bevind zich ook direct de grootste haven van de deta. De stad heeft ongeveer 4,5 miljoen inwoeners. De stad is vernoemd naar Alexander de Grote, waar de stad ook door gesticht is. De stad speelt een belangrijke rol in de geschiedenis en vormde een belangrijk punt in het rijk van Alexander. Hij lag hier ook begraven voordat zijn graf verdween.<br> De stad is lange tijd het belangrijkste internationale centrum geweest van cultuur, kennis en geleerdheid vanwege de Koninklijke Bibliotheek</p>
+      </div>
+
+      <div id="land" class="tabcontent">
+        <h1>Mississippi</h1>
+        <p>Verenigde Staten</p>
+        <br>
+        <p><img src="https://image.freepik.com/vrije-photo/golvende-amerikaanse-vlag-verenigde-staten-van-amerika_43379-66.jpg" alt="golvende amerikaanse vlag verenigde staten van amerika" width="300px" height="150px"></p>
+        <br><br><br>
+
+        <h1>Nijl</h1>
+        <p>Egypte</p>
+        <br>
+        <p><img src="https://www.vlagonline.nl/wp-content/uploads/sites/11/2012/12/Egypte-400x270px.jpg" alt="nationale vlag van Egypte" width="300px" height="150px"></p>
+      </div>
+
+<script>
+         function openCity(evt, cityName) {
+        // Declare all variables
+        var i, tabcontent, tablinks;
+      
+        // Get all elements with class="tabcontent" and hide them
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+          tabcontent[i].style.display = "none";
+        }
+      
+        // Get all elements with class="tablinks" and remove the class "active"
+        tablinks = document.getElementsByClassName("tablinks");
+        for (i = 0; i < tablinks.length; i++) {
+          tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+      
+        // Show the current tab, and add an "active" class to the link that opened the tab
+        document.getElementById(cityName).style.display = "block";
+        evt.currentTarget.className += " active";
+      }
+</script>
