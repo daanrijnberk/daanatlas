@@ -10,14 +10,6 @@ h2{
   letter-spacing: 2px;
 }
 
-#myVideo {
-  position: fixed;
-  right: 0;
-  bottom: 0;
-  min-width: 100%;
-  min-height: 100%;
-}
-
 .content {
   margin-top: 150px;
   position: fixed;
@@ -29,6 +21,10 @@ h2{
  
  body {
   font-family: Arial, Helvetica, sans-serif;
+  background-image: url("https://d2csxpduxe849s.cloudfront.net/media/D9C47D27-CF22-4106-BDD62A07BB6C91E1/76F9B753-39CB-49D9-A7A8D051A862EEF7/Web%202240-50862688-977d-4579-ae18-123d08748a0a.jpg");
+  height: 500px;
+  background-repeat: no-repeat;
+  background-size: 1680px;
   background-color: rgb(228, 242, 255);
 }
 
@@ -43,7 +39,7 @@ h2{
   float: left; */
   display: inline-block;
   vertical-align: top;
-  width: 200px;
+  width: 220px;
   height: 80px;
   float: left;
 }
@@ -101,7 +97,7 @@ li a {
 }
 
 li a:hover {
-  color: rgb(192, 53, 18);
+  color: rgb(129, 31, 6);
   text-decoration: underline;
 }
 
