@@ -1,46 +1,105 @@
 <!DOCTYPE html>
 <html>
-
-  <link rel="stylesheet" href="./Css/cssIndex.css">
-<link href="https://fonts.googleapis.com/css2?family=Secular+One&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@200&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@700&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
-integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
-crossorigin=""/>
-<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
-integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
-crossorigin=""></script>
-<style>#mapid { height: 500px; }</style>
-
 <head>
-  <title>Visit Colombia home</title>
+  <link rel="stylesheet" href="./Css/cssIndex.css">
+  <link href="https://fonts.googleapis.com/css2?family=Secular+One&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@200&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+  integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+  crossorigin=""/>
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+  integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+  crossorigin=""></script>
+  <style>#mapid { height: 500px; }</style>
+  <script src="https://cdn.jsdelivr.net/npm/terraformer"></script>
+  <script src="https://unpkg.com/@terraformer/wkt"></script>
+
+
+    <title>Visit Colombia home</title>
 </head>
 
 <body> 
 
-<div id="navbar">
-  <a href="index.html">
-    <img class="logo" src="./img/voormensendiegeenilluhebben (1).png" alt="logo visit cuba"></a>
-  <span class="nav" onclick="openNav()">&#9776;</span>
-</div>
+  <div id="navbar">
+    <a href="index.html">
+      <img class="logo" src="./img/voormensendiegeenilluhebben (1).png" alt="logo visit cuba"></a>
+    <span class="nav" onclick="openNav()">&#9776;</span>
+  </div>
 
   <div id="myNav" class="overlay">
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
     <div class="overlay-content">
-      <a href="#">About</a>
-      <a href="#">Services</a>
-      <a href="#">Clients</a>
-      <a href="#">Contact</a>
+      <a href="#">Book your Vacation</a>
+      <a href="#">About Colombia</a>
+      <a href="#">Hotels & Rental</a>
+      <a href="#">Special Locations</a>
+      <a href="#">Contact us</a>
     </div>
   </div>
 
-  <script>
+  <div class="icon-bar">
+    <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+    <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
+    <a href="#" class="google"><i class="fa fa-google"></i></a>
+    <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
+    <a href="#" class="youtube"><i class="fa fa-youtube"></i></a>
+  </div>
+
+  <div class="row">
+    <div class="columncenter">
+      <div class="titel">Everything for your Colombian Vacation</div>
+  <p class="paragraaf">
+    Come and experience all the different Climates, cities and lands
+    </p>
+  <br>
+    <p class="paragraaf">
+      Colombia has the most extreme climate differences of all the countries in the world. You would not expect te picture in the background to be colombia, but it actually is!
+      <br> We want te help you explore all of Colombia. From its wastelands to its rainforests. Come explore all the different people and cultures, the big Cities and small villages. 
+      <br><br> Come visit Colombia
+      </p>
+      <button class="button"onclick="window.location.href='https://daanrijnberk.github.io/daanatlas/Mississippi.html';">Get your vacation now</button>
+    </div>
+  </div>
+
+  <div class="container1">
+    <div class="columncenter2">
+      <div class="titel2">Latest news</div>
+      <div class="gridNieuwsLeft">
+        <a href="index.html">
+        <img class="imgNieuws" src="https://i0.wp.com/drakenslag.com/wp-content/uploads/2022/02/US-tech-firms-hunt-for-cheap-home-based-hires-in-Latin.jpg?w=760&ssl=1" alt="Delta Alliance logo"></a>
+        <p class="nieuwsTitel">Busy streets, covid over?</p>
+        <p class="nieuwsData">Wed 9 maart 2021 | 0 comments</p>
+      </div>
+      <div class="gridNieuwsCenter">
+        <a href="index.html">
+          <img class="imgNieuws" src="https://centrocatalina.com/wp-content/uploads/2019/11/Fotos.00_05_37_37.Imagen-fija053.jpg" alt="Delta Alliance logo"></a>
+          <p class="nieuwsTitel">National monument opens</p>
+          <p class="nieuwsData">Wed 9 maart 2021 | 0 comments</p>
+      </div>
+      <div class="gridNieuwsRight">
+        <a href="index.html">
+          <img class="imgNieuws" src="https://thebogotapost.com/wp-content/uploads/2016/11/lluvia.jpg" alt="Delta Alliance logo"></a>
+          <p class="nieuwsTitel">El Niño arrives</p>
+          <p class="nieuwsData">Wed 9 maart 2021 | 0 comments</p>
+      </div>
+  </div>
+
+
+  <div class="container2">
+    <div class="titel3">About us</div>
+  <div class="row">
+      <div class="homeKaart">
+        <div id="mapid"></div>
+        <button class="buttonKaart" id="Zoomin" onclick="zoomOnClick()">Inzoomen</button>
+
+
+        <script> 
   function openNav() {
     document.getElementById("myNav").style.width = "100%";
   }
@@ -60,98 +119,62 @@ window.onscroll = function() {
   }
   prevScrollpos = currentScrollPos;
 }
-  </script>
 
-<div class="icon-bar">
-  <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
-  <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
-  <a href="#" class="google"><i class="fa fa-google"></i></a>
-  <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
-  <a href="#" class="youtube"><i class="fa fa-youtube"></i></a>
-</div>
+        var mymap = L.map('mapid').setView([52.356249,5.620991], 9);
 
-<div class="row">
-  <div class="columncenter">
-    <div class="titel">Everything for your Colombian Vacation</div>
-<p class="paragraaf">
-  Come and experience all the different Climates, cities and lands
-  </p>
-<br>
-  <p class="paragraaf">
-    Colombia has the most extreme climate differences of all the countries in the world. You would not expect te picture in the background to be colombia, but it actually is!
-    <br> We want te help you explore all of Colombia. From its wastelands to its rainforests. Come explore all the different people and cultures, the big Cities and small villages. 
-    <br><br> Come visit Colombia
-    </p>
-    <button class="button"onclick="window.location.href='https://daanrijnberk.github.io/daanatlas/Mississippi.html';">Get your vacation now</button>
-  </div>
-</div>
+        L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
+            attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+            maxZoom: 15,
+            id: 'mapbox/streets-v11',
+            tileSize: 512,
+            zoomOffset: -1,
+            accessToken: 'pk.eyJ1IjoiZGFhbjA4MDIiLCJhIjoiY2tpNXYzMDV6MnVldjJxbXB1emw5aDNyZCJ9.-C7Qteu7PIRRIyBuiedBtQ'
+        }).addTo(mymap);
 
-<div class="container1">
-  <div class="columncenter2">
-    <div class="titel2">Latest news</div>
-    <div class="gridNieuwsLeft">
-      <a href="index.html">
-      <img class="imgNieuws" src="https://i0.wp.com/drakenslag.com/wp-content/uploads/2022/02/US-tech-firms-hunt-for-cheap-home-based-hires-in-Latin.jpg?w=760&ssl=1" alt="Delta Alliance logo"></a>
-      <p class="nieuwsTitel">Busy streets, covid over?</p>
-      <p class="nieuwsData">Wed 9 maart 2021 | 0 comments</p>
-    </div>
-    <div class="gridNieuwsCenter">
-      <a href="index.html">
-        <img class="imgNieuws" src="https://centrocatalina.com/wp-content/uploads/2019/11/Fotos.00_05_37_37.Imagen-fija053.jpg" alt="Delta Alliance logo"></a>
-        <p class="nieuwsTitel">National monument opens</p>
-        <p class="nieuwsData">Wed 9 maart 2021 | 0 comments</p>
-    </div>
-    <div class="gridNieuwsRight">
-      <a href="index.html">
-        <img class="imgNieuws" src="https://thebogotapost.com/wp-content/uploads/2016/11/lluvia.jpg" alt="Delta Alliance logo"></a>
-        <p class="nieuwsTitel">El Niño arrives</p>
-        <p class="nieuwsData">Wed 9 maart 2021 | 0 comments</p>
-    </div>
-</div>
-
-<div class="container2">
-  <div class="titel3">About us</div>
-<div class="row">
-    <div class="homeKaart">
-      <div id="mapid"></div>
-      <script> 
-      var mymap = L.map('mapid').setView([52.356249,5.620991], 10);
-
-      L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
-          attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
-          maxZoom: 15,
-          id: 'mapbox/streets-v11',
-          tileSize: 512,
-          zoomOffset: -1,
-          accessToken: 'pk.eyJ1IjoiZGFhbjA4MDIiLCJhIjoiY2tpNXYzMDV6MnVldjJxbXB1emw5aDNyZCJ9.-C7Qteu7PIRRIyBuiedBtQ'
-      }).addTo(mymap);
-
-      var myvar = 
+        var myvar = 
+        {
+    "type": "FeatureCollection",
+    "features": [
       {
-  "type": "FeatureCollection",
-  "features": [
-    {
-      "type": "Feature",
-      "properties": {
-        "marker-color": "#ff0000",
-        "marker-size": "medium",
-        "marker-symbol": "city"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-        5.620991,
-        52.356249
-        ]
+        "type": "Feature",
+        "properties": {
+          "marker-color": "#ff0000",
+          "marker-size": "medium",
+          "marker-symbol": "city"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+          5.620991,
+          52.356249
+          ]
+        }
       }
-    }
-  ]
-};
+    ]
+  };
 
-var x = L.geoJSON(myvar).addTo(mymap);   
-      </script>
-</div>
-</div>
+  var x = L.geoJSON(myvar).addTo(mymap);   
+
+  const geoJsonLayer = L.geoJson().addTo(mymap);
+    
+    function zoomOnClick() {
+      mymap.setView( [52.356249,5.620991], 12)
+
+      fetch('https://geodata.nationaalgeoregister.nl/locatieserver/v3/lookup?id=gem-f62e7c1f70b07988ba1715f232fe6fbe&fl=*')
+        .then(response => response.json())
+        .then(data => {
+          const wkt = data.response.docs[0].geometrie_ll
+
+          const geojson = Terraformer.wktToGeoJSON(wkt)
+          console.log(geojson)
+          geoJsonLayer.addData(geojson)
+        })
+
+
+    }
+        </script>
+  </div>
+  </div>
 
 </body>
 </html>

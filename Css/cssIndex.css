@@ -336,3 +336,14 @@ h2{
   padding: 10px;
 }
 
+.buttonKaart {
+  border: none;
+  background-color: #bb0000;
+  padding: 10px;
+  color: white;
+}
+
+.buttonKaart:hover {
+  background-color: #ff0000;
+  cursor: pointer;
+}
