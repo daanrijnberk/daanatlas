@@ -5,13 +5,13 @@
 h1{
   line-height: 0px;
   font-family: 'Secular One', sans-serif;
+  text-align: left;
 }
 h2{
   letter-spacing: 2px;
 }
 
 .content {
-  margin-top: 50px;
   position: fixed;
   color: #f1f1f1;
   width: 100%;
@@ -20,81 +20,36 @@ h2{
  
  body {
   font-family: Arial, Helvetica, sans-serif;
-  background-image: url("https://d2csxpduxe849s.cloudfront.net/media/D9C47D27-CF22-4106-BDD62A07BB6C91E1/76F9B753-39CB-49D9-A7A8D051A862EEF7/Web%202240-50862688-977d-4579-ae18-123d08748a0a.jpg");
-  height: 500px;
+  background-image: url("https://images03.nicepage.com/a1389d7bc73adea1e1c1fb7e/216e92cd4d8950deab4cb5b5/natureforesttreesfog.jpg");
   background-repeat: no-repeat;
   background-size: 1680px;
   background-color: rgb(228, 242, 255);
+  margin: 0px;
 }
 
-/* Navbar container */
-.navbar {
-  overflow: hidden;
-  font-family: 'Merriweather Sans', sans-serif;
-  padding: 10px;
-  margin-left: 10px;
+#navbar {
+  background-color: rgb(255, 255, 255); /* Black background color */
+  position: fixed; /* Make it stick/fixed */
+  top: 0; /* Stay on top */
+  width: 100%; /* Full width */
+  transition: top 0.3s; /* Transition effect when sliding down (and up) */
 }
 
-/* Links inside the navbar */
-.navbar a {
+/* Style the navbar links */
+#navbar a {
   float: left;
-  font-size: 16px;
+  display: block;
   color: white;
   text-align: center;
-  padding: 14px 16px;
+  padding: 15px;
   text-decoration: none;
 }
 
-/* The dropdown container */
-.dropdown {
+.nav {
+  font-size: 40px;
+  cursor: pointer;
   float: right;
-  overflow: hidden;
-  margin-right: 5px;
-}
-
-/* Dropdown button */
-.dropdown .dropbtn {
-  font-size: 20px;
-  border: none;
-  outline: none;
-  color: white;
-  padding: 14px 16px;
-  background-color: inherit;
-  font-family: inherit; /* Important for vertical align on mobile phones */
-  margin: 0; /* Important for vertical align on mobile phones */
-}
-
-/* Add a red background color to navbar links on hover */
-.dropdown:hover .dropbtn {
-  color: #ff0000;
-}
-
-/* Dropdown content (hidden by default) */
-.dropdown-content {
-  display: none;
-  position: absolute;
-  min-width: 130px;
-  z-index: 1;
-}
-
-/* Links inside the dropdown */
-.dropdown-content a {
-  float: none;
-  color: rgb(255, 255, 255);
-  padding: 10px 10px;
-  text-decoration: none;
-  display: block;
-  text-align: center;
-}
-
-/* Add a grey background color to dropdown links on hover */
-.dropdown-content a:hover {
-  color: #ff0000;
-}
-
-/* Show the dropdown menu on hover */
-.dropdown:hover .dropdown-content {
-  display: block;
+  margin-right: 20px;
 }
 
 .logo{
@@ -102,119 +57,72 @@ h2{
   float: left; */
   display: inline-block;
   vertical-align: top;
-  width: 220px;
-  height: 80px;
+  width: 270px;
+  height: 33px;
   float: left;
 }
 
-.teksttitel{
-  color: rgb(255, 255, 255);
-  line-height: 0px;
-  font-family: 'Anton', sans-serif;
-  border-radius: 25px;
-  font-size: 30px;
-  margin-left: 60px;
-}
-.tekst{
-  color: black;
-  line-height: 0px;
-  font-family: 'Anton', sans-serif;
-  padding: 20px;
-  margin-top: 20px;
-  border-radius: 25px;
-  font-size: 30px;
-}
-
-.Quote{
-  font-family: 'Anton', sans-serif;
-  border-radius: 25px;
-  font-size: 18px;
-  letter-spacing: 2px;
-  margin-left: 60px;
-  margin-top: 70px;
-}
-
-.titel2{
-  color: rgb(255, 0, 0);
-}
-
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 25px;
-  overflow: hidden;
-  position: sticky;
+/* The Overlay (background) */
+.overlay {
+  /* Height & width depends on how you want to reveal the overlay (see JS below) */   
+  height: 100%;
+  width: 0;
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
   top: 0;
-  width: 100%;
+  background-color: rgb(0,0,0); /* Black fallback color */
+  background-color: rgba(0,0,0, 0.9); /* Black w/opacity */
+  overflow-x: hidden; /* Disable horizontal scroll */
+  transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
 }
 
-li {
-  float: left;
-  border-right:2px solid rgb(255, 255, 255);
+/* Position the content inside the overlay */
+.overlay-content {
+  position: relative;
+  top: 25%; /* 25% from the top */
+  width: 100%; /* 100% width */
+  text-align: center; /* Centered text/links */
+  margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
 }
 
-li a {
-  display: block;
-  color: rgb(255, 255, 255);
-  font-family: 'Merriweather Sans', sans-serif;
-  text-align: center;
-  padding: 10px 40px;
+/* The navigation links inside the overlay */
+.overlay a {
+  padding: 8px;
   text-decoration: none;
-  font-size: 20px;
-  margin-top: 8px;
+  font-size: 36px;
+  color: #818181;
+  display: block; /* Display block instead of inline */
+  transition: 0.3s; /* Transition effects on hover (color) */
 }
 
-li a:hover {
-  color: rgb(129, 31, 6);
-  text-decoration: underline;
+/* When you mouse over the navigation links, change their color */
+.overlay a:hover, .overlay a:focus {
+  color: #f1f1f1;
 }
 
-.leftcolumn {
-  float: left;
-  width: 60%;
-  text-align: justify;
+/* Position the close button (top right corner) */
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
 }
 
-.rightcolumn {
-  float: right;
-  width: 40%;
-  padding-left: 20px;
+/* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
+@media screen and (max-height: 450px) {
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+  }
 }
 
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-.button {
-  padding: 10px 20px;
-  font-size: 20px;
-  text-align: center;
-  cursor: pointer;
-  outline: none;
-  color: #fff;
-  background-color: #0638c0;
-  border: none;
-  border-radius: 15px;
-  box-shadow: 0 9px #999;
-  margin-left: 25px;
-  margin-top: 20px;
-}
-
-.button:hover {background-color: #042172}
-
-.button:active {
-  background-color: #ff0000;
-  box-shadow: 0 5px #666;
-  transform: translateY(4px);
-}
-
+/* Fixed/sticky icon bar (vertically aligned 50% from the top of the screen) */
 .icon-bar {
   position: fixed;
-  margin-left: 1466px;
-  top: 55%;
+  top: 50%;
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
@@ -224,10 +132,10 @@ li a:hover {
 .icon-bar a {
   display: block;
   text-align: center;
-  padding: 15px;
+  padding: 14px;
   transition: all 0.3s ease;
   color: white;
-  font-size: 35px;
+  font-size: 28px;
 }
 
 /* Style the social media icons with color, if you want */
@@ -259,3 +167,172 @@ li a:hover {
   background: #bb0000;
   color: white;
 }
+
+.leftcolumn {
+  float: left;
+  width: 65%;
+  text-align: justify;
+}
+
+.titel{
+  color: rgb(0, 0, 0);
+  line-height: 0px;
+  font-family: 'Anton', sans-serif;
+  padding: 20px;
+  border-radius: 25px;
+  font-size: 35px;
+  margin-top: 40px;
+  text-align: center;
+}
+
+.titel2 {
+  font-family: 'Permanent Marker', cursive;
+  text-align: center;
+  font-size: 50px;
+  margin-top: 20px;
+  color: #fff;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.rightcolumn {
+  float: right;
+  width: 35%;
+}
+
+.paragraaf{
+  font-size: 20px;
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+}
+
+.columncenter{
+  float: left;
+  width: 50%;
+  padding: 10px;
+  margin-top: 80px;
+  margin-left: 25%;
+  text-align: left;
+}
+
+.columncenter2{
+  float: left;
+  width: 80%;
+  padding: 10px;
+  margin-top: 20px;
+  margin-left: 10%;
+  text-align: left;
+}
+
+.button {
+  padding: 10px 20px;
+  font-size: 18px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: #fff;
+  background-color: #4744ce;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+  margin-left: 36%;
+  margin-top: 10px;
+}
+
+.button:hover {background-color: #3700ff}
+
+.button:active {
+  background-color: #3700ff;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+.container1 {
+  display: grid;
+  gap: 10px;
+  background-color: #f07474;
+  width: 100%;
+  margin-top: 300px;
+  height: 1100px;
+}
+
+.gridNieuwsLeft {
+  float: left;
+  width: 30%;
+  text-align: center;
+  background-color: rgb(255, 255, 255);
+  margin-top: 30px;
+  border-radius: 20px;
+  height: 340px;
+}
+
+.gridNieuwsCenter {
+  float: left;
+  width: 30%;
+  text-align: center;
+  background-color: rgb(255, 255, 255);
+  margin-top: 30px;
+  margin-left: 60px;
+  border-radius: 20px;
+  height: 340px;
+}
+
+.gridNieuwsRight {
+  float: right;
+  width: 30%;
+  text-align: center;
+  background-color: rgb(255, 255, 255);
+  margin-top: 30px;
+  border-radius: 20px;
+  height: 340px;
+}
+
+.imgNieuws {
+  width: 320px;
+  height: 220px;
+  margin-top: 25px;
+  border-radius: 20px;
+}
+
+.nieuwsTitel {
+  font-family: 'Acme', sans-serif;
+  letter-spacing: 1px;
+  font-size: 27px;
+  text-align: left;
+  margin-top: 5px;
+  margin-left: 25px;
+}
+
+.nieuwsData {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #aaaaaa;
+  font-size: 12px;
+}
+
+.container2 {
+  display: grid;
+  gap: 10px;
+  background-color: #daf6ff;
+  margin-top: 100px;
+  width: 100%;
+  height: 700px;
+}
+
+.titel3 {
+  font-family: 'Permanent Marker', cursive;
+  text-align: center;
+  font-size: 50px;
+  margin-top: 40px;
+  color: #f07474;
+}
+
+.homeKaart {
+  float: right;
+  width: 50%;
+  padding: 10px;
+}
+
