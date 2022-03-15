@@ -20,7 +20,8 @@
    
   body {
     font-family: Arial, Helvetica, sans-serif;
-    background-image: url("https://colorlib.com/etc/bforms/colorlib-booking-19/img/background.jpg");
+    background-image: url("https://images01.nicepage.com/04/c9/04c92f4b1888be1f59c0cf8549526806.jpeg");
+    background-position: 50% 30%;
     background-repeat: no-repeat;
     background-size: 1680px;
     background-color: rgb(228, 242, 255);
@@ -31,6 +32,7 @@
   
   #navbar {
     position: fixed; /* Make it stick/fixed */
+    background-color: #ffffff;
     top: 0; /* Stay on top */
     width: 100%; /* Full width */
     transition: top 0.3s; /* Transition effect when sliding down (and up) */
