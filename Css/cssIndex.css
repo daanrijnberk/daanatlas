@@ -336,9 +336,19 @@ h2{
   padding: 10px;
 }
 
+.homeAbout {
+  float: left;
+  width: 42%;
+  padding: 10px;
+  margin-left: 70px;
+  text-align: center;
+}
+
 .buttonKaart {
+  font-family: 'Acme', sans-serif;
+  font-size: 20px;
   border: none;
-  background-color: #bb0000;
+  background-color: #f07474;
   padding: 10px;
   color: white;
 }
@@ -347,3 +357,29 @@ h2{
   background-color: #ff0000;
   cursor: pointer;
 }
+
+.aboutTitel {
+  font-family: 'Acme', sans-serif;
+  font-size: 30px;
+  text-align: center;
+  margin-top: 5px;
+}
+
+.container3 {
+  display: grid;
+  gap: 10px;
+  background-color: #ffffff;
+  margin-top: 50px;
+  width: 100%;
+  height: 100px;
+}
+
+.footerTekst {
+  font-family: 'Permanent Marker', cursive;
+  text-align: center;
+  font-size: 50px;
+  margin-top: 10px;
+  color: #f07474;
+}
+
+
