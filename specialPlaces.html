@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="./Css/specialPlaces.css">
+  <link href="https://fonts.googleapis.com/css2?family=Secular+One&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@200&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.13.0/css/ol.css" type="text/css">
+  <script src="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.13.0/build/ol.js"></script>
+
+    <title>Special Locations</title>
+</head>
+
+<body> 
+  <div class="icon-bar">
+    <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+    <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
+    <a href="#" class="google"><i class="fa fa-google"></i></a>
+    <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
+    <a href="#" class="youtube"><i class="fa fa-youtube"></i></a>
+  </div>
+
+  <div id="navbar">
+    <a href="index.html">
+      <img class="logo" src="./img/voormensendiegeenilluhebben (1).png" alt="logo visit cuba"></a>
+    <span class="nav" onclick="openNav()">&#9776;</span>
+  </div>
+
+  <div id="myNav" class="overlay">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <div class="overlay-content">
+      <a href="#">Book your Vacation</a>
+      <a href="#">About Colombia</a>
+      <a href="#">Hotels & Rental</a>
+      <a href="#">Special Locations</a>
+      <a href="#">Contact us</a>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="titel">Special<br>Locations</div>
+  </div>
+
+  <div class="container1">
+    <div class="titel1">start planning your journey</div>
+    <div class="row">
+    <div class="placesKaart">
+    <div id="map" class="map"></div>
+    </div>
+    <div class="placesAbout">
+      <div class="placesTitel"> We provide you with the most perfect locations</div>
+      <p>The map on the left shows the most exclusive, hidden and special locations.<br>
+         These locations have been carefully selected out of all the great places<br>
+         Colombia has to offer. All of these locations are tourist friendly and offer<br>
+         no worries at all. In case of conflict or other bad situations locations will<br> 
+         be removed from our list. This way we keep our selected locations the best no <br>
+         matter the circumstances. <br><br>
+         All locations differ in type. You can click the locations on the map to receive<br>
+         more information about the spot. In general we filtered them into three different<br>
+         groups: Nature, City, other. The location indicators can give you more information<br>
+         like name and description.<br><br> 
+         For more info:
+         Main office: Harderwijk (see map)<br>
+         Phone number: 06 12345678<br>
+         Mail: info@visitColombia.com</p>
+    </div>
+  </div>
+</div>
+
+<div class="container2">
+  <div class="columncenter2">
+    <div class="titel2">Locations</div>
+    <div class="gridNieuwsLeft">
+      <a href="index.html">
+      <img class="imgNieuws" src="https://i0.wp.com/drakenslag.com/wp-content/uploads/2022/02/US-tech-firms-hunt-for-cheap-home-based-hires-in-Latin.jpg?w=760&ssl=1" alt="Delta Alliance logo"></a>
+      <p class="nieuwsTitel">Busy streets, covid over?</p>
+      <p class="nieuwsData">Wed 9 maart 2021 | 0 comments</p>
+    </div>
+    <div class="gridNieuwsCenter">
+      <a href="index.html">
+        <img class="imgNieuws" src="https://centrocatalina.com/wp-content/uploads/2019/11/Fotos.00_05_37_37.Imagen-fija053.jpg" alt="Delta Alliance logo"></a>
+        <p class="nieuwsTitel">National monument opens</p>
+        <p class="nieuwsData">Wed 9 maart 2021 | 0 comments</p>
+    </div>
+    <div class="gridNieuwsRight">
+      <a href="index.html">
+        <img class="imgNieuws" src="https://thebogotapost.com/wp-content/uploads/2016/11/lluvia.jpg" alt="Delta Alliance logo"></a>
+        <p class="nieuwsTitel">El Niño arrives</p>
+        <p class="nieuwsData">Wed 9 maart 2021 | 0 comments</p>
+    </div>
+</div>
+
+        <script> 
+  function openNav() {
+    document.getElementById("myNav").style.width = "100%";
+  }
+  
+  function closeNav() {
+    document.getElementById("myNav").style.width = "0%";
+  }
+
+  /* When the user scrolls down, hide the navbar. When the user scrolls up, show the navbar */
+var prevScrollpos = window.pageYOffset;
+window.onscroll = function() {
+  var currentScrollPos = window.pageYOffset;
+  if (prevScrollpos > currentScrollPos) {
+    document.getElementById("navbar").style.top = "0";
+  } else {
+    document.getElementById("navbar").style.top = "-50px";
+  }
+  prevScrollpos = currentScrollPos;
+}
+
+  </script>
+
+<script type="text/javascript">
+  var map = new ol.Map({
+    target: 'map',
+    layers: [
+      new ol.layer.Tile({
+        source: new ol.source.OSM()
+      })
+    ],
+    view: new ol.View({
+      center: ol.proj.fromLonLat([-73.4562148425872, 3.6234758940051988]),
+      zoom: 6
+    })
+  });
+</script>
+
+</body>
+</html>
