@@ -273,14 +273,29 @@ margin-top: 5px;
 } 
 
 .json {
-    margin-left: 80px;
-    margin-top: 30px;
-    height: 550px;
+margin-left: 80px;
+margin-top: 30px;
+height: 550px;
 }
 
 .container3 {
-    gap: 10px;
-    background-color: #daf6ff;
-    width: 100%;
-    height: 700px;
+gap: 10px;
+background-color: #daf6ff;
+width: 100%;
+height: 700px;
+}
+
+.container4 {
+gap: 10px;
+background-color: #f07474;
+width: 100%;
+height: 500px;
+}
+
+.datawrapper {
+    float: center;
+    width: 70%;
+    padding: 10px;
+    text-align: center;
+    margin-left: 250px;
     }
